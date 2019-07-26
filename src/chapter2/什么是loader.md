@@ -1,0 +1,5 @@
+webpack本身只认识js文件，或者说js模块，对于非js模块webpack是无法处理的
+
+loader就是一个模块打包方案，非js模块webpack不知道怎么办，但是loader知道，它会告诉webpack对于非js模块该如何打包
+
+当引入一个非js模块时，首先要想到的就是应该使用正确的loader去处理

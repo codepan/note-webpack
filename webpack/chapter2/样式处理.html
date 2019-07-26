@@ -1,0 +1,130 @@
+<!DOCTYPE HTML><html><head><meta charset=UTF-8><meta content="text/html; charset=utf-8" http-equiv=Content-Type><title>2.3 样式处理 · GitBook</title><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=description content=""><meta name=generator content="GitBook 3.2.3"><link rel=stylesheet href=../gitbook/style.css><link rel=stylesheet href=../gitbook/gitbook-plugin-highlight/website.css><link rel=stylesheet href=../gitbook/gitbook-plugin-search/search.css><link rel=stylesheet href=../gitbook/gitbook-plugin-fontsettings/website.css><meta name=HandheldFriendly content=true><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><meta name=apple-mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-status-bar-style content=black><link rel=apple-touch-icon-precomposed sizes=152x152 href=../gitbook/images/apple-touch-icon-precomposed-152.png><link rel="shortcut icon" href=../gitbook/images/favicon.ico type=image/x-icon><link rel=next href=字体文件处理.html><link rel=prev href=图片处理.html></head><body><div class=book><div class=book-summary><div id=book-search-input role=search><input type=text placeholder="Type to search"></div><nav role=navigation><ul class=summary><li class=chapter data-level=1.1 data-path=../ ><a href=../ >Introduction</a></li><li class=chapter data-level=1.2 data-path=../chapter1/ ><a href=../chapter1/ >第1章 初探篇</a><ul class=articles><li class=chapter data-level=1.2.1 data-path=../chapter1/webpack究竟是什么.html><a href=../chapter1/webpack究竟是什么.html>1.1 webpack究竟是什么</a></li><li class=chapter data-level=1.2.2 data-path=../chapter1/什么是模块打包工具.html><a href=../chapter1/什么是模块打包工具.html>1.2 什么是模块打包工具</a></li><li class=chapter data-level=1.2.3 data-path=../chapter1/搭建webpack环境.html><a href=../chapter1/搭建webpack环境.html>1.2 搭建webpack环境</a></li><li class=chapter data-level=1.2.4 data-path=../chapter1/wbpack配置文件.html><a href=../chapter1/wbpack配置文件.html>1.3 wbpack配置文件</a></li></ul></li><li class=chapter data-level=1.3 data-path=./ ><a href=./ >第2章 核心概念篇</a><ul class=articles><li class=chapter data-level=1.3.1 data-path=什么是loader.html><a href=什么是loader.html>2.1 什么是loader</a></li><li class=chapter data-level=1.3.2 data-path=图片处理.html><a href=图片处理.html>2.2 图片处理</a></li><li class="chapter active" data-level=1.3.3 data-path=样式处理.html><a href=样式处理.html>2.3 样式处理</a></li><li class=chapter data-level=1.3.4 data-path=字体文件处理.html><a href=字体文件处理.html>2.4 字体文件处理</a></li><li class=chapter data-level=1.3.5 data-path=html处理.html><a href=html处理.html>2.5 html处理</a></li><li class=chapter data-level=1.3.6 data-path=clean-webpack-plugin.html><a href=clean-webpack-plugin.html>2.6 clean-webpack-plugin</a></li><li class=chapter data-level=1.3.7 data-path=entry与output基础配置.html><a href=entry与output基础配置.html>2.7 entry与output基础配置</a></li><li class=chapter data-level=1.3.8 data-path=sourceMap.html><a href=sourceMap.html>2.8 sourceMap</a></li><li class=chapter data-level=1.3.9 data-path=webpack-dev-server.html><a href=webpack-dev-server.html>2.9 webpack-dev-server</a></li><li class=chapter data-level=1.3.10 data-path=热模块替换.html><a href=热模块替换.html>2.10 热模块替换(Hot Module Replacement,HMR)</a></li><li class=chapter data-level=1.3.11 data-path=babel转换ES6.html><a href=babel转换ES6.html>2.11 babel转换ES6</a></li><li class=chapter data-level=1.3.12 data-path=全局变量引入问题.html><a href=全局变量引入问题.html>2.12 全局变量引入问题</a></li><li class=chapter data-level=1.3.13 data-path=resolve.html><a href=resolve.html>2.13 resolve</a></li></ul></li><li class=chapter data-level=1.4 data-path=../chapter3/ ><a href=../chapter3/ >第3章 高级概念篇</a><ul class=articles><li class=chapter data-level=1.4.1 data-path=../chapter3/tree-shaking.html><a href=../chapter3/tree-shaking.html>3.1 tree-shaking</a></li><li class=chapter data-level=1.4.2 data-path=../chapter3/development和production的区分打包.html><a href=../chapter3/development和production的区分打包.html>3.2 development和production的区分打包</a></li><li class=chapter data-level=1.4.3 data-path=../chapter3/code-splitting.html><a href=../chapter3/code-splitting.html>3.3 code-splitting</a></li><li class=chapter data-level=1.4.4 data-path=../chapter3/SplitChunksPlugin.html><a href=../chapter3/SplitChunksPlugin.html>3.4 SplitChunksPlugin</a></li><li class=chapter data-level=1.4.5 data-path="../chapter3/lazy loading懒加载和chunk.html"><a href="../chapter3/lazy loading懒加载和chunk.html">3.5 lazy loading懒加载和chunk</a></li><li class=chapter data-level=1.4.6 data-path=../chapter3/Preloading和Prefetching.html><a href=../chapter3/Preloading和Prefetching.html>3.6 Preloading和Prefetching</a></li><li class=chapter data-level=1.4.7 data-path=../chapter3/CSS代码分割.html><a href=../chapter3/CSS代码分割.html>3.7 CSS代码分割</a></li><li class=chapter data-level=1.4.8 data-path=../chapter3/Shimming.html><a href=../chapter3/Shimming.html>3.8 Shimming</a></li><li class=chapter data-level=1.4.9 data-path=../chapter3/环境变量.html><a href=../chapter3/环境变量.html>3.9 环境变量</a></li><li class=chapter data-level=1.4.10 data-path=../chapter3/打包分析.html><a href=../chapter3/打包分析.html>3.10 打包分析</a></li><li class=chapter data-level=1.4.11 data-path=../chapter3/实时打包.html><a href=../chapter3/实时打包.html>3.11 实时打包</a></li><li class=chapter data-level=1.4.12 data-path=../chapter3/scope-hoisting.html><a href=../chapter3/scope-hoisting.html>4.5 scope-hoisting</a></li><li class=chapter data-level=1.4.13 data-path=../chapter3/module.noParse.md><span>4.6 module.noParse</span></li><li class=chapter data-level=1.4.14 data-path=../chapter3/webpack.IgnorePlugin.md><span>4.7 webpack.IgnorePlugin</span></li><li class=chapter data-level=1.4.15 data-path=../chapter3/多线程打包.md><span>4.8 多线程打包</span></li><li class=chapter data-level=1.4.16 data-path=../chapter3/处理公共代码.md><span>4.10 处理公共代码</span></li></ul></li><li class=chapter data-level=1.5 data-path=../chapter4/ ><a href=../chapter4/ >第4章 实战篇</a><ul class=articles><li class=chapter data-level=1.5.1 data-path=../chapter4/Library打包.html><a href=../chapter4/Library打包.html>4.1 Library打包</a></li><li class=chapter data-level=1.5.2 data-path=../chapter4/WebpackDevServer代理.html><a href=../chapter4/WebpackDevServer代理.html>4.2 WebpackDevServer代理</a></li><li class=chapter data-level=1.5.3 data-path=../chapter4/WebpackDevServer单页路由.html><a href=../chapter4/WebpackDevServer单页路由.html>4.3 WebpackDevServer单页路由</a></li><li class=chapter data-level=1.5.4 data-path=../chapter4/ESLint的使用.html><a href=../chapter4/ESLint的使用.html>4.4 ESLint的使用</a></li><li class=chapter data-level=1.5.5 data-path=../chapter4/多页应用打包.html><a href=../chapter4/多页应用打包.html>4.5 多页应用打包</a></li></ul></li><li class=chapter data-level=1.6 data-path=../chapter5/ ><a href=../chapter5/ >第5章 优化篇</a><ul class=articles><li class=chapter data-level=1.6.1 data-path=../chapter5/webpack性能优化.html><a href=../chapter5/webpack性能优化.html>5.1 webpack性能优化</a></li></ul></li><li class=chapter data-level=1.7 data-path=../chapter6/ ><a href=../chapter6/ >第6章 原理篇</a><ul class=articles><li class=chapter data-level=1.7.1 data-path=../chapter6/编写loader.html><a href=../chapter6/编写loader.html>6.1 编写loader</a></li><li class=chapter data-level=1.7.2 data-path=../chapter6/实现babel-loader.html><a href=../chapter6/实现babel-loader.html>6.2 实现babel-loader</a></li><li class=chapter data-level=1.7.3 data-path=../chapter6/实现banner-loader.html><a href=../chapter6/实现banner-loader.html>6.3 实现banner-loader</a></li><li class=chapter data-level=1.7.4 data-path=../chapter6/实现file-loader.html><a href=../chapter6/实现file-loader.html>6.4 实现file-loader</a></li><li class=chapter data-level=1.7.5 data-path=../chapter6/实现url-loader.html><a href=../chapter6/实现url-loader.html>6.5 实现url-loader</a></li><li class=chapter data-level=1.7.6 data-path=../chapter6/实现sass-loader.html><a href=../chapter6/实现sass-loader.html>6.6 实现sass-loader</a></li><li class=chapter data-level=1.7.7 data-path=../chapter6/实现css-loader.html><a href=../chapter6/实现css-loader.html>6.7 实现css-loader</a></li><li class=chapter data-level=1.7.8 data-path=../chapter6/实现style-loader.html><a href=../chapter6/实现style-loader.html>6.8 实现style-loader</a></li><li class=chapter data-level=1.7.9 data-path=../chapter6/编写plugin.html><a href=../chapter6/编写plugin.html>6.9 编写plugin</a></li><li class=chapter data-level=1.7.10 data-path=../chapter6/实现文件列表插件.html><a href=../chapter6/实现文件列表插件.html>6.10 实现文件列表插件</a></li><li class=chapter data-level=1.7.11 data-path=../chapter6/实现内联资源插件.html><a href=../chapter6/实现内联资源插件.html>6.11 实现内联资源插件</a></li></ul></li><li class=chapter data-level=1.8 data-path=../chapter7/ ><a href=../chapter7/ >第7章 尾声篇</a><ul class=articles><li class=chapter data-level=1.8.1 data-path=../chapter7/copy-webpack-plugin.html><a href=../chapter7/copy-webpack-plugin.html>7.1 copy-webpack-plugin</a></li><li class=chapter data-level=1.8.2 data-path=../chapter7/webpack.BannerPlugin.html><a href=../chapter7/webpack.BannerPlugin.html>7.2 webpack.BannerPlugin</a></li></ul></li><li class=divider></li><li><a href=https://www.gitbook.com target=blank class=gitbook-link>Published with GitBook</a></li></ul></nav></div><div class=book-body><div class=body-inner><div class=book-header role=navigation><h1><i class="fa fa-circle-o-notch fa-spin"></i><a href=..>2.3 样式处理</a></h1></div><div class=page-wrapper tabindex=-1 role=main><div class=page-inner><div id=book-search-results><div class=search-noresults><section class="normal markdown-section"><pre><code class=lang-js><span class=hljs-comment>// webpack.config.js</span>
+<span class=hljs-built_in>module</span>.exports = {
+  <span class=hljs-built_in>module</span>: {
+    rules: [
+      {
+        test: <span class=hljs-regexp>/\.css$/</span>,
+        use: [<span class=hljs-string>&apos;style-loader&apos;</span>, <span class=hljs-string>&apos;css-loader&apos;</span>]
+      }
+    ]
+  }
+}
+</code></pre><h1 id=css-loader>css-loader</h1><p>&#x5206;&#x6790;css&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x89E3;&#x6790;<code>@import</code>&#x8BED;&#x6CD5;</p><p><strong>modules&#x3001;importLoaders</strong></p><pre><code class=lang-js><span class=hljs-comment>// createAvatar.js</span>
+<span class=hljs-keyword>import</span> avatar <span class=hljs-keyword>from</span> <span class=hljs-string>&apos;./avatar.jpg&apos;</span>
+<span class=hljs-keyword>import</span> style <span class=hljs-keyword>from</span> <span class=hljs-string>&apos;./index.scss&apos;</span>
+<span class=hljs-keyword>export</span> <span class=hljs-keyword>default</span> () =&gt; {
+  <span class=hljs-keyword>let</span> img = <span class=hljs-keyword>new</span> Image()
+  img.src= avatar
+  img.classList.add(style.avatar)
+
+  <span class=hljs-keyword>let</span> root = <span class=hljs-built_in>document</span>.getElementById(<span class=hljs-string>&apos;root&apos;</span>)
+  root.append(img)
+}
+</code></pre><pre><code class=lang-js><span class=hljs-comment>// index.js</span>
+<span class=hljs-keyword>import</span> avatar <span class=hljs-keyword>from</span> <span class=hljs-string>&apos;./avatar.jpg&apos;</span>
+<span class=hljs-comment>// &#x8FD9;&#x6837;&#x5F15;&#x5165;&#x7684;scss&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x4E0B;&#x6587;&#x4F7F;&#x7528;style.avatar&#x7ED9;DOM&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;avatar&#x7684;class</span>
+<span class=hljs-comment>// &#x5219;&#x6837;&#x5F0F;&#x53EA;&#x5BF9;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x6709;&#x6548;</span>
+<span class=hljs-keyword>import</span> style <span class=hljs-keyword>from</span> <span class=hljs-string>&apos;./index.scss&apos;</span>
+<span class=hljs-keyword>import</span> createAvatar <span class=hljs-keyword>from</span> <span class=hljs-string>&apos;./createAvatar&apos;</span>
+
+createAvatar()
+
+<span class=hljs-keyword>let</span> img = <span class=hljs-keyword>new</span> Image()
+img.src= avatar
+img.classList.add(style.avatar)
+
+<span class=hljs-keyword>let</span> root = <span class=hljs-built_in>document</span>.getElementById(<span class=hljs-string>&apos;root&apos;</span>)
+root.append(img)
+</code></pre><pre><code class=lang-js><span class=hljs-built_in>module</span>: {
+  rules: [
+    {
+      test: <span class=hljs-regexp>/.css$/</span>,
+      use: [
+        <span class=hljs-string>&apos;style-loader&apos;</span>,
+        {
+          loader: <span class=hljs-string>&apos;css-loader&apos;</span>,
+          options: {
+            importLoaders: <span class=hljs-number>2</span>, <span class=hljs-comment>// &#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4F1A;&#x4FDD;&#x8BC1;&#x65E0;&#x8BBA;&#x662F;&#x5728;&#x5165;&#x53E3;js&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x5165;scss&#xFF0C;&#x8FD8;&#x662F;&#x5728;scss&#x6587;&#x4EF6;&#x4E2D;&#x901A;&#x8FC7;@import&#x518D;&#x5F15;&#x5165;scss&#x6587;&#x4EF6;&#xFF0C;&#x90FD;&#x5C06;&#x4F1A;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E9B;scss&#x6587;&#x4EF6;&#x90FD;&#x80FD;&#x88AB;&#x6B63;&#x786E;&#x7684;&#x5904;&#x7406;</span>
+            modules: <span class=hljs-literal>true</span> <span class=hljs-comment>// &#x5F00;&#x542F;css&#x7684;&#x6A21;&#x5757;&#x5316;&#x6253;&#x5305;&#xFF0C;&#x5373;&#x5F15;&#x5165;&#x7684;css&#x53EA;&#x5728;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x4E2D;&#x6709;&#x6548;</span>
+          }
+        }
+        {
+          loader: <span class=hljs-string>&apos;postcss-loader&apos;</span>,
+          options: {
+            plugins: [
+              <span class=hljs-built_in>require</span>(<span class=hljs-string>&apos;autoprefixer&apos;</span>)
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+</code></pre><h1 id=style-loader>style-loader</h1><p>&#x5F97;&#x5230;css-loader&#x751F;&#x6210;&#x7684;css&#x5185;&#x5BB9;&#xFF0C;&#x628A;css&#x5185;&#x5BB9;&#x901A;&#x8FC7;<code>&lt;style&gt;</code>&#x6807;&#x7B7E;&#x6302;&#x8F7D;&#x5230;&#x9875;&#x9762;&#x4E2D;&#x7684;<code>&lt;head&gt;</code>&#x90E8;&#x5206;</p><h1 id=sass-loader>sass-loader</h1><p>&#x5141;&#x8BB8;&#x4F60;&#x4F7F;&#x7528;scss&#x8BED;&#x6CD5;&#xFF0C;sass-loader&#x4F9D;&#x8D56;node-sass&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E24;&#x4E2A;&#x5305;&#x90FD;&#x9700;&#x8981;&#x5B89;&#x88C5;</p><pre><code class=lang-shell>npm i -D sass-loader node-sass
+</code></pre><pre><code class=lang-js><span class=hljs-comment>// webpack.config.js</span>
+<span class=hljs-built_in>module</span>.exports = {
+  <span class=hljs-built_in>module</span>: {
+    rules: [
+      {
+        test: <span class=hljs-regexp>/\.scss$/</span>,
+        use: [<span class=hljs-string>&apos;style-loader&apos;</span>, <span class=hljs-string>&apos;css-loader&apos;</span>, <span class=hljs-string>&apos;sass-loader&apos;</span>]
+      }
+    ]
+  }
+}
+</code></pre><h1 id=postcss-loader>postcss-loader</h1><pre><code class=lang-js><span class=hljs-built_in>module</span>: {
+  rules: [
+    {
+      test: <span class=hljs-regexp>/.css$/</span>,
+      use: [
+        <span class=hljs-string>&apos;style-loader&apos;</span>,
+        <span class=hljs-string>&apos;css-loader&apos;</span>,
+        {
+          loader: <span class=hljs-string>&apos;postcss-loader&apos;</span>,
+          options: {
+            plugins: [
+              <span class=hljs-built_in>require</span>(<span class=hljs-string>&apos;autoprefixer&apos;</span>)
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+</code></pre><h1 id=mini-css-extract-plugin>mini-css-extract-plugin</h1><p>&#x9ED8;&#x8BA4;style-loader&#x53EA;&#x80FD;&#x628A;css&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<code>&lt;style&gt;</code>&#x6807;&#x7B7E;&#xFF0C;&#x63D2;&#x5165;&#x5230;html&#x6587;&#x4EF6;&#x4E2D;</p><p>&#x4F46;&#x662F;&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5E0C;&#x671B;css&#x6837;&#x5F0F;&#x53EF;&#x4EE5;&#x88AB;&#x62BD;&#x79BB;&#x6210;&#x5355;&#x72EC;&#x7684;css&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;<code>&lt;link&gt;</code>&#x6807;&#x7B7E;&#x4F7F;&#x7528;&#x5916;&#x94FE;&#x7684;&#x5F62;&#x5F0F;&#x5F15;&#x5165;&#x5230;html&#x6587;&#x4EF6;&#x4E2D;</p><p>mini-css-extract-plugin&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x62BD;&#x79BB;&#x5355;&#x72EC;&#x7684;css&#x6210;&#x4E3A;css&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x52A8;&#x4F7F;&#x7528;link&#x6807;&#x7B7E;&#x5728;html&#x6587;&#x4EF6;&#x4E2D;&#x5C06;&#x5176;&#x5F15;&#x5165;</p><p>&#x5728;webpack4.*&#x4EE5;&#x524D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#x53EB;&#x505A;<code>extract-text-webpack-plugin</code>&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x5DF2;&#x7ECF;&#x88AB;&#x5E9F;&#x5F03;&#xFF0C;&#x5728;4.*&#x4EE5;&#x540E;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;mini-css-extract-plugin&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;</p><pre><code class=lang-javascript><span class=hljs-built_in>module</span>.exports = {
+  <span class=hljs-built_in>module</span>: {
+    rules: [
+      {
+        test: <span class=hljs-regexp>/\.css$/</span>,
+        use: [MiniCssExtractPlugin.loader, <span class=hljs-string>&apos;css-loader&apos;</span>]
+      }
+    ]
+  },
+  plugins: [
+    <span class=hljs-keyword>new</span> MiniCssExtractPlugin({
+      filename:  <span class=hljs-string>&apos;main.css&apos;</span>  <span class=hljs-comment>// &#x62BD;&#x79BB;&#x7684;css&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0D;&#x914D;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;main.css</span>
+    })
+  ]
+}
+</code></pre><p><strong>filename</strong></p><p>&#x6307;&#x5B9A;&#x4EA7;&#x51FA;&#x7684;css&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4E0D;&#x4F46;&#x80FD;&#x591F;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x8FD8;&#x80FD;&#x5199;&#x6210;&#x8DEF;&#x5F84;&#x7684;&#x5F62;&#x5F0F;<code>filename: &apos;css/main.css&apos;</code>&#xFF0C;&#x8FD9;&#x6837;&#x6253;&#x5305;&#x63D0;&#x53D6;&#x51FA;&#x7684;css&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x88AB;&#x653E;&#x7F6E;&#x5230;css&#x76EE;&#x5F55;&#x4E0B;</p><h1 id=optimize-css-assets-webpack-plugin>optimize-css-assets-webpack-plugin</h1><p>&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x53EF;&#x4EE5;&#x4F18;&#x5316;css&#x8D44;&#x6E90;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x538B;&#x7F29;css&#x6587;&#x4EF6;&#x4E2D;css&#x4EE3;&#x7801;</p><pre><code class=lang-js><span class=hljs-keyword>const</span> OptimizeCssAssetsWebpackPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>&apos;optimize-css-assets-webpack-plugin&apos;</span>)
+
+<span class=hljs-built_in>module</span>.exports = {
+  mode: <span class=hljs-string>&apos;production&apos;</span>,
+  optimization: {
+    minimizer: [
+      <span class=hljs-keyword>new</span> OptimizeCssAssetsWebpackPlugin()
+    ]
+  }
+}
+</code></pre><p>webpack&#x9ED8;&#x8BA4;&#x4ECE; webpack 4 &#x5F00;&#x59CB;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x4F60;&#x9009;&#x62E9;&#x7684; mode &#x6765;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x4F18;&#x5316;&#xFF0C;&#x4E0D;&#x8FC7;&#x6240;&#x6709;&#x7684;&#x4F18;&#x5316;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x914D;&#x7F6E;&#x548C;&#x91CD;&#x5199;&#x3002;</p><p>mode&#x4E3A;production&#x65F6;</p><ul><li>optimization.minimize&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;true&#xFF0C;&#x5373;&#x544A;&#x77E5;webpack&#x4F7F;&#x7528;<code>terser-webpack-Plugin</code>&#x538B;&#x7F29;bundle&#x3002;</li><li>&#x4F46;&#x662F;css&#x4E0D;&#x4F1A;&#x88AB;&#x4F18;&#x5316;&#x538B;&#x7F29;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;optimize-css-assets-webpack-plugin&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x6765;&#x8FDB;&#x884C;&#x5904;&#x7406; mode&#x4E3A;development&#x65F6;</li><li>&#x9ED8;&#x8BA4;js&#x6587;&#x4EF6;&#x548C;css&#x6587;&#x4EF6;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x538B;&#x7F29;</li><li>&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;optimization.minimize&#x5176;&#x4E3A;true&#xFF0C;&#x53BB;&#x538B;&#x7F29;js&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x4EC5;&#x80FD;&#x538B;&#x7F29;js&#x6587;&#x4EF6;&#xFF0C;css&#x6587;&#x4EF6;&#x4F9D;&#x7136;&#x4E0D;&#x4F1A;&#x88AB;&#x538B;&#x7F29;</li><li>&#x5373;&#x4F7F;&#x4F7F;&#x7528;&#x4E86;optimize-css-assets-webpack-plugin&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;css&#x6587;&#x4EF6;&#x540C;&#x6837;&#x4E0D;&#x4F1A;&#x88AB;&#x538B;&#x7F29;</li><li>&#x6240;&#x4EE5;&#x8981;&#x60F3;&#x538B;&#x7F29;css&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x5728;mode&#x4E3A;production&#x65F6;&#x4F7F;&#x7528;optimize-css-assets-webpack-plugin&#x63D2;&#x4EF6;</li><li><p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;optimize-css-assets-webpack-plugin&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x8FD8;&#x60F3;&#x538B;&#x7F29;js&#x6587;&#x4EF6;&#xFF0C;&#x90A3;&#x6B64;&#x65F6;&#x5982;&#x4E0B;&#x7684;&#x914D;&#x7F6E;&#x662F;&#x65E0;&#x6548;&#x7684;</p><pre><code class=lang-js><span class=hljs-keyword>const</span> OptimizeCssAssetsWebpackPlugin = <span class=hljs-built_in>require</span>(<span class=hljs-string>&apos;optimize-css-assets-webpack-plugin&apos;</span>)
+
+<span class=hljs-built_in>module</span>.exports = {
+  mode: <span class=hljs-string>&apos;production&apos;</span>,
+  optimization: {
+    minimize: <span class=hljs-literal>true</span>, <span class=hljs-comment>// &#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x662F;&#x65E0;&#x6548;&#x7684;&#xFF0C;&#x6B64;&#x65F6;&#x5FC5;&#x987B;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x538B;&#x7F29;js&#x7684;&#x63D2;&#x4EF6;&#x6765;&#x5BF9;&#x6B64;&#x505A;&#x51FA;&#x5904;&#x7406;</span>
+    minimizer: [
+      <span class=hljs-keyword>new</span> OptimizeCssAssetsWebpackPlugin()
+    ]
+  }
+}
+</code></pre></li></ul></section></div><div class=search-results><div class=has-results><h1 class=search-results-title><span class=search-results-count></span>results matching "<span class=search-query></span>"</h1><ul class=search-results-list></ul></div><div class=no-results><h1 class=search-results-title>No results matching "<span class=search-query></span>"</h1></div></div></div></div></div></div><a href=图片处理.html class="navigation navigation-prev" aria-label="Previous page: 2.2 图片处理"><i class="fa fa-angle-left"></i></a><a href=字体文件处理.html class="navigation navigation-next" aria-label="Next page: 2.4 字体文件处理"><i class="fa fa-angle-right"></i></a></div><script>var gitbook=gitbook||[];gitbook.push(function(){gitbook.page.hasChanged({page:{title:"2.3 样式处理",level:"1.3.3",depth:2,next:{title:"2.4 字体文件处理",level:"1.3.4",depth:2,path:"chapter2/字体文件处理.md",ref:"chapter2/字体文件处理.md",articles:[]},previous:{title:"2.2 图片处理",level:"1.3.2",depth:2,path:"chapter2/图片处理.md",ref:"chapter2/图片处理.md",articles:[]},dir:"ltr"},config:{gitbook:"*",theme:"default",variables:{},plugins:[],pluginsConfig:{highlight:{},search:{},lunr:{maxIndexSize:1e6,ignoreSpecialCharacters:!1},sharing:{facebook:!0,twitter:!0,google:!1,weibo:!1,instapaper:!1,vk:!1,all:["facebook","google","twitter","weibo","instapaper"]},fontsettings:{theme:"white",family:"sans",size:2},"theme-default":{styles:{website:"styles/website.css",pdf:"styles/pdf.css",epub:"styles/epub.css",mobi:"styles/mobi.css",ebook:"styles/ebook.css",print:"styles/print.css"},showLevel:!1}},structure:{langs:"LANGS.md",readme:"README.md",glossary:"GLOSSARY.md",summary:"SUMMARY.md"},pdf:{pageNumbers:!0,fontSize:12,fontFamily:"Arial",paperSize:"a4",chapterMark:"pagebreak",pageBreaksBefore:"/",margin:{right:62,left:62,top:56,bottom:56}},styles:{website:"styles/website.css",pdf:"styles/pdf.css",epub:"styles/epub.css",mobi:"styles/mobi.css",ebook:"styles/ebook.css",print:"styles/print.css"}},file:{path:"chapter2/样式处理.md",mtime:"2019-06-17T07:07:07.827Z",type:"markdown"},gitbook:{version:"3.2.3",time:"2019-07-11T07:34:39.397Z"},basePath:"..",book:{language:""}})})</script></div><script src=../gitbook/gitbook.js></script><script src=../gitbook/theme.js></script><script src=../gitbook/gitbook-plugin-search/search-engine.js></script><script src=../gitbook/gitbook-plugin-search/search.js></script><script src=../gitbook/gitbook-plugin-lunr/lunr.min.js></script><script src=../gitbook/gitbook-plugin-lunr/search-lunr.js></script><script src=../gitbook/gitbook-plugin-sharing/buttons.js></script><script src=../gitbook/gitbook-plugin-fontsettings/fontsettings.js></script></body></html>
