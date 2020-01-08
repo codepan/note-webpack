@@ -1,0 +1,1149 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.3 实现banner-loader · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="实现file-loader.html" />
+    
+    
+    <link rel="prev" href="实现babel-loader.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第1章 初探篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/webpack究竟是什么.html">
+            
+                <a href="../chapter1/webpack究竟是什么.html">
+            
+                    
+                    1.1 webpack究竟是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/什么是模块打包工具.html">
+            
+                <a href="../chapter1/什么是模块打包工具.html">
+            
+                    
+                    1.2 什么是模块打包工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/搭建webpack环境.html">
+            
+                <a href="../chapter1/搭建webpack环境.html">
+            
+                    
+                    1.2 搭建webpack环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/wbpack配置文件.html">
+            
+                <a href="../chapter1/wbpack配置文件.html">
+            
+                    
+                    1.3 wbpack配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第2章 核心概念篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/什么是loader.html">
+            
+                <a href="../chapter2/什么是loader.html">
+            
+                    
+                    2.1 什么是loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/图片处理.html">
+            
+                <a href="../chapter2/图片处理.html">
+            
+                    
+                    2.2 图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/样式处理.html">
+            
+                <a href="../chapter2/样式处理.html">
+            
+                    
+                    2.3 样式处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/字体文件处理.html">
+            
+                <a href="../chapter2/字体文件处理.html">
+            
+                    
+                    2.4 字体文件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/html处理.html">
+            
+                <a href="../chapter2/html处理.html">
+            
+                    
+                    2.5 html处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter2/clean-webpack-plugin.html">
+            
+                <a href="../chapter2/clean-webpack-plugin.html">
+            
+                    
+                    2.6 clean-webpack-plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter2/entry与output基础配置.html">
+            
+                <a href="../chapter2/entry与output基础配置.html">
+            
+                    
+                    2.7 entry与output基础配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../chapter2/sourceMap.html">
+            
+                <a href="../chapter2/sourceMap.html">
+            
+                    
+                    2.8 sourceMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../chapter2/webpack-dev-server.html">
+            
+                <a href="../chapter2/webpack-dev-server.html">
+            
+                    
+                    2.9 webpack-dev-server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../chapter2/热模块替换.html">
+            
+                <a href="../chapter2/热模块替换.html">
+            
+                    
+                    2.10 热模块替换(Hot Module Replacement,HMR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../chapter2/babel转换ES6.html">
+            
+                <a href="../chapter2/babel转换ES6.html">
+            
+                    
+                    2.11 babel转换ES6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../chapter2/全局变量引入问题.html">
+            
+                <a href="../chapter2/全局变量引入问题.html">
+            
+                    
+                    2.12 全局变量引入问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../chapter2/resolve.html">
+            
+                <a href="../chapter2/resolve.html">
+            
+                    
+                    2.13 resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../chapter2/占位符.html">
+            
+                <a href="../chapter2/占位符.html">
+            
+                    
+                    2.14 占位符
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第3章 高级概念篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/tree-shaking.html">
+            
+                <a href="../chapter3/tree-shaking.html">
+            
+                    
+                    3.1 tree-shaking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/development和production的区分打包.html">
+            
+                <a href="../chapter3/development和production的区分打包.html">
+            
+                    
+                    3.2 development和production的区分打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/code-splitting.html">
+            
+                <a href="../chapter3/code-splitting.html">
+            
+                    
+                    3.3 code-splitting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/SplitChunksPlugin.html">
+            
+                <a href="../chapter3/SplitChunksPlugin.html">
+            
+                    
+                    3.4 SplitChunksPlugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/lazy loading懒加载和chunk.html">
+            
+                <a href="../chapter3/lazy loading懒加载和chunk.html">
+            
+                    
+                    3.5 lazy loading懒加载和chunk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/Preload和Prefetch.html">
+            
+                <a href="../chapter3/Preload和Prefetch.html">
+            
+                    
+                    3.6 Preload和Prefetch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter3/CSS代码分割.html">
+            
+                <a href="../chapter3/CSS代码分割.html">
+            
+                    
+                    3.7 CSS代码分割
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter3/Shimming.html">
+            
+                <a href="../chapter3/Shimming.html">
+            
+                    
+                    3.8 Shimming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter3/环境变量.html">
+            
+                <a href="../chapter3/环境变量.html">
+            
+                    
+                    3.9 环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../chapter3/打包分析.html">
+            
+                <a href="../chapter3/打包分析.html">
+            
+                    
+                    3.10 打包分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../chapter3/实时打包.html">
+            
+                <a href="../chapter3/实时打包.html">
+            
+                    
+                    3.11 实时打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../chapter3/scope-hoisting.html">
+            
+                <a href="../chapter3/scope-hoisting.html">
+            
+                    
+                    3.12 scope-hoisting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../chapter3/module.noParse.md">
+            
+                <span>
+            
+                    
+                    3.13 module.noParse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../chapter3/webpack.IgnorePlugin.md">
+            
+                <span>
+            
+                    
+                    3.14 webpack.IgnorePlugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../chapter3/多线程打包.md">
+            
+                <span>
+            
+                    
+                    3.15 多线程打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../chapter3/处理公共代码.md">
+            
+                <span>
+            
+                    
+                    3.16 处理公共代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第4章 实战篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/Library打包.html">
+            
+                <a href="../chapter4/Library打包.html">
+            
+                    
+                    4.1 Library打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/WebpackDevServer代理.html">
+            
+                <a href="../chapter4/WebpackDevServer代理.html">
+            
+                    
+                    4.2 WebpackDevServer代理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/WebpackDevServer单页路由.html">
+            
+                <a href="../chapter4/WebpackDevServer单页路由.html">
+            
+                    
+                    4.3 WebpackDevServer单页路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/ESLint的使用.html">
+            
+                <a href="../chapter4/ESLint的使用.html">
+            
+                    
+                    4.4 ESLint的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/多页应用打包.html">
+            
+                <a href="../chapter4/多页应用打包.html">
+            
+                    
+                    4.5 多页应用打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    第5章 优化篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/webpack性能优化.html">
+            
+                <a href="../chapter5/webpack性能优化.html">
+            
+                    
+                    5.1 webpack性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第6章 原理篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="编写loader.html">
+            
+                <a href="编写loader.html">
+            
+                    
+                    6.1 编写loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="实现babel-loader.html">
+            
+                <a href="实现babel-loader.html">
+            
+                    
+                    6.2 实现babel-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.3" data-path="实现banner-loader.html">
+            
+                <a href="实现banner-loader.html">
+            
+                    
+                    6.3 实现banner-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="实现file-loader.html">
+            
+                <a href="实现file-loader.html">
+            
+                    
+                    6.4 实现file-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="实现url-loader.html">
+            
+                <a href="实现url-loader.html">
+            
+                    
+                    6.5 实现url-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="实现sass-loader.html">
+            
+                <a href="实现sass-loader.html">
+            
+                    
+                    6.6 实现sass-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="实现css-loader.html">
+            
+                <a href="实现css-loader.html">
+            
+                    
+                    6.7 实现css-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="实现style-loader.html">
+            
+                <a href="实现style-loader.html">
+            
+                    
+                    6.8 实现style-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="编写plugin.html">
+            
+                <a href="编写plugin.html">
+            
+                    
+                    6.9 编写plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="实现文件列表插件.html">
+            
+                <a href="实现文件列表插件.html">
+            
+                    
+                    6.10 实现文件列表插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="实现内联资源插件.html">
+            
+                <a href="实现内联资源插件.html">
+            
+                    
+                    6.11 实现内联资源插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第7章 尾声篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/copy-webpack-plugin.html">
+            
+                <a href="../chapter7/copy-webpack-plugin.html">
+            
+                    
+                    7.1 copy-webpack-plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/webpack.BannerPlugin.html">
+            
+                <a href="../chapter7/webpack.BannerPlugin.html">
+            
+                    
+                    7.2 webpack.BannerPlugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.3 实现banner-loader</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>banner&#x5373;&#x4E3A;&#x7ED9;js&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x6CE8;&#x91CA;&#xFF0C;&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x8005;&#xFF0C;&#x6587;&#x4EF6;&#x7684;&#x4FEE;&#x6539;&#x65E5;&#x671F;&#xFF0C;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;&#x7B49;&#x7B49;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5411;banner-loader&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4EE5;&#x544A;&#x77E5;&#x6DFB;&#x52A0;&#x4EC0;&#x4E48;&#x6CE8;&#x91CA;&#xFF0C;&#x5728;&#x6B64;&#x6211;&#x4EEC;&#x8BBE;&#x8BA1;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>text&#xFF1A;&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x672C;</li>
+<li>filename&#xFF1A;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5230;&#x6CE8;&#x91CA;&#x4E2D;&#x3002;&#x6CE8;&#x610F;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x54E6;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-comment">// loaders/banner-loader.js</span>
+<span class="hljs-keyword">const</span> loaderUtils = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;loader-utils&apos;</span>)
+<span class="hljs-comment">// &#x6821;&#x9A8C;&#x53C2;&#x6570;&#x662F;&#x5426;&#x7B26;&#x5408;&#x89C4;&#x8303;</span>
+<span class="hljs-keyword">const</span> validateOptions = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;schema-utils&apos;</span>)
+
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">source</span>) </span>{
+  <span class="hljs-keyword">const</span> options = loaderUtils.getOptions(<span class="hljs-keyword">this</span>)
+  <span class="hljs-keyword">const</span> callback = <span class="hljs-keyword">this</span>.async()
+
+  <span class="hljs-comment">// &#x521B;&#x5EFA;&#x53C2;&#x6570;&#x89C4;&#x8303;&#xFF08;&#x9AA8;&#x67B6;&#xFF09;</span>
+  <span class="hljs-keyword">const</span> schema = {
+    type: <span class="hljs-string">&apos;object&apos;</span>, <span class="hljs-comment">// &#x6307;&#x5B9A;options&#x9700;&#x8981;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+    properties: { <span class="hljs-comment">// &#x6307;&#x5B9A;options&#x6709;&#x54EA;&#x4E9B;&#x5C5E;&#x6027;</span>
+      text: {
+        type: <span class="hljs-string">&apos;string&apos;</span> <span class="hljs-comment">// &#x6307;&#x5B9A;options.text&#x5E94;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+      },
+      filename: {
+        type: <span class="hljs-string">&apos;string&apos;</span> <span class="hljs-comment">// &#x6307;&#x5B9A;options.filename&#x5E94;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;</span>
+      }
+    }
+  }
+
+  <span class="hljs-comment">// &#x4F20;&#x5165;&#x89C4;&#x8303;&#x5BF9;&#x8C61;&#xFF0C;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x53CA;&#x6821;&#x9A8C;&#x672A;&#x901A;&#x8FC7;&#x65F6;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#x63D0;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x6807;&#x8BC6;&#x662F;&#x8C01;&#x51FA;&#x4E86;&#x9519;&#x8BEF;</span>
+  validateOptions(schema, options, <span class="hljs-string">&apos;banner-loader&apos;</span>)
+
+  <span class="hljs-keyword">if</span> (options.filename) {
+    fs.readFile(options.filename, <span class="hljs-string">&apos;utf-8&apos;</span>, (error, data) =&gt; {
+      callback(error, <span class="hljs-string">`/** <span class="hljs-subst">${data}</span> */\n<span class="hljs-subst">${source}</span>`</span>)
+    })
+  } <span class="hljs-keyword">else</span> {
+    callback(<span class="hljs-literal">null</span>, <span class="hljs-string">`/** <span class="hljs-subst">${options.text}</span> */\n<span class="hljs-subst">${source}</span>`</span>)
+  }
+}
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// webpack.config.js</span>
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>)
+<span class="hljs-built_in">module</span>.exports = {
+  mode: <span class="hljs-string">&apos;development&apos;</span>,
+  entry: <span class="hljs-string">&apos;./src/index.js&apos;</span>,
+  output: {
+    filename: <span class="hljs-string">&apos;bundle.js&apos;</span>,
+    path: path.resolve(__dirname, <span class="hljs-string">&apos;dist&apos;</span>)
+  },
+  resolveLoader: {
+    modules: [<span class="hljs-string">&apos;node_modules&apos;</span>, <span class="hljs-string">&apos;loaders&apos;</span>]
+  },
+  watch: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x662F;&#x5426;&#x76D1;&#x542C;&#x6253;&#x5305;</span>
+  <span class="hljs-built_in">module</span>: {
+    rules: [
+      {
+        test: <span class="hljs-regexp">/\.js$/</span>,
+        use: {
+          loader: <span class="hljs-string">&apos;banner-loader&apos;</span>,
+          options: {
+            text: <span class="hljs-string">&apos;codepan author&apos;</span>,
+            filename: path.resolve(__dirname, <span class="hljs-string">&apos;src/assets/banner.txt&apos;</span>)
+          }
+        }
+      }
+    ]
+  }
+}
+</code></pre>
+<p><strong>watch</strong></p>
+<p>watch&#x53C2;&#x6570;&#x7528;&#x6765;&#x544A;&#x8BC9;webpack&#x662F;&#x5426;&#x76D1;&#x542C;&#x6253;&#x5305;&#xFF0C;&#x4E00;&#x65E6;&#x6E90;&#x6587;&#x4EF6;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5C31;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x6253;&#x5305;&#x3002;&#x6211;&#x4EEC;&#x914D;&#x7F6E;&#x4E3A;true&#x4E4B;&#x540E;&#xFF0C;&#x5C1D;&#x8BD5;&#x4FEE;&#x6539;<code>banner.txt</code>&#x6587;&#x4EF6;&#xFF0C;&#x53D1;&#x73B0;&#x5E76;&#x6CA1;&#x6709;&#x91CD;&#x65B0;&#x6253;&#x5305;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;webpack&#x8BA4;&#x4E3A;banner.txt&#x662F;&#x4E0D;&#x5F52;&#x5C5E;&#x81EA;&#x5DF1;&#x7BA1;&#x8F96;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x5FFD;&#x7565;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x8981;&#x60F3;&#x8BA9;banner.txt&#x6587;&#x4EF6;&#x88AB;webpack&#x6240;&#x7BA1;&#x8F96;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x501F;&#x52A9;loader&#x4E2D;&#x7684;this&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;</p>
+<p><strong>this.addDependency</strong></p>
+<pre><code class="lang-js"><span class="hljs-comment">// loaders/banner-loader.js</span>
+...
+if (options.filename) {
+  <span class="hljs-comment">// &#x5C06;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x8FDB;webpack&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x5373;&#x6587;&#x4EF6;&#x6B64;&#x65F6;&#x5C31;&#x4F1A;&#x88AB;webpack&#x6240;&#x7BA1;&#x8F96;</span>
+  <span class="hljs-comment">// &#x4E00;&#x65E6;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;webpack&#x91CD;&#x65B0;&#x6253;&#x5305;</span>
+  <span class="hljs-keyword">this</span>.addDependency(options.filename)
+  fs.readFile(options.filename, <span class="hljs-string">&apos;utf-8&apos;</span>, (error, data) =&gt; {
+    callback(error, <span class="hljs-string">`/** <span class="hljs-subst">${data}</span> */\n<span class="hljs-subst">${source}</span>`</span>)
+  })
+}
+...
+</code></pre>
+<p><strong>this.cacheable</strong></p>
+<p>&#x662F;&#x5426;&#x5F00;&#x542F;&#x7F13;&#x5B58;&#x6A21;&#x5F0F;&#xFF0C;webpack&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x5F00;&#x542F;&#xFF0C;&#x5C24;&#x5176;&#x5F53;loader&#x4E2D;&#x5904;&#x7406;&#x7684;&#x903B;&#x8F91;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x542B;&#x6709;&#x5927;&#x91CF;&#x8BA1;&#x7B97;&#x65F6;</p>
+<p>&#x65B9;&#x6CD5;&#x4F20;&#x5165;boolean&#x503C;&#xFF0C;&#x4E0D;&#x4F20;&#x9ED8;&#x8BA4;&#x4E3A;true&#xFF0C;&#x5373;&#x9ED8;&#x8BA4;&#x4E3A;&#x5F00;&#x542F;&#x7F13;&#x5B58;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// loaders/banner-loader.js</span>
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">source</span>) </span>{
+  <span class="hljs-keyword">this</span>.cacheable &amp;&amp; <span class="hljs-keyword">this</span>.cacheable()
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="实现babel-loader.html" class="navigation navigation-prev " aria-label="Previous page: 6.2 实现babel-loader">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="实现file-loader.html" class="navigation navigation-next " aria-label="Next page: 6.4 实现file-loader">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.3 实现banner-loader","level":"1.7.3","depth":2,"next":{"title":"6.4 实现file-loader","level":"1.7.4","depth":2,"path":"chapter6/实现file-loader.md","ref":"chapter6/实现file-loader.md","articles":[]},"previous":{"title":"6.2 实现babel-loader","level":"1.7.2","depth":2,"path":"chapter6/实现babel-loader.md","ref":"chapter6/实现babel-loader.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/实现banner-loader.md","mtime":"2019-06-20T02:17:04.823Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-10T06:22:08.810Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

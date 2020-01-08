@@ -66,7 +66,7 @@ module.exports = {
 // loaders/replace-loader.js
 module.exports = function (source) {
   // 函数内部的this上有很多属性和方法供我们使用
-  // 这里通过结构的形式取出this的query属性，将query属性重命名为options，这里的options就指向的是我们传入的那个options对象
+  // 这里通过解构的形式取出this的query属性，将query属性重命名为options，这里的options就指向的是我们传入的那个options对象
   const { query: options } = this
   console.log(options)
   return source.replace(options.origin, options.target)
@@ -197,9 +197,8 @@ module.exports = {
   resolveLoader: {
     alias: {
       'replace-loader': path.resolve(__dirname, 'loaders/replace-loader'),
-      'replace-async-loader': path.resolve(__dirname, 'loaders/replace-async-loader'),
+      'replace-async-loader': path.resolve(__dirname, 'loaders/replace-async-loader')
     }
-    modules: ['node_modules', './loaders']
   },
   module: {
     rules: [

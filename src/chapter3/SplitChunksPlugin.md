@@ -1,6 +1,6 @@
 [上一节](code-splitting.md)我们学习code splitting这种技术，知道`optimization.splitChunks`可以进行code splitting的相关配置
 
-这一节讲学习更广更深的知识，其实webpack中code splitting底层使用的是`SplitChunksPlugin`这个插件来完成代码分割的
+这一节将学习更广更深的知识，其实webpack中code splitting底层使用的是`SplitChunksPlugin`这个插件来完成代码分割的
 
 上一节index.js的如下代码：
 ```js
@@ -29,7 +29,7 @@ getComponent().then(ele => {
 import(/* webpackChunkName: 'lodash' */ 'lodash')
 ```
 
-现在打包出来的lodash已经不在是`0.js`这么丑陋了，而是变成了`vendors~lodash.js`，波浪线后面的名字就是魔法注释中的字符串，问题又来了：vendors~又是什么鬼呢？怎么会多个这东西？
+现在打包出来的lodash已经不在是`0.js`这么丑陋了，而是变成了`vendors~lodash.js`，波浪线后面的名字就是魔法注释中的字符串，问题又来了：`vendors~`又是什么鬼呢？怎么会多个这东西？
 
 ```js
 // webpack.config.js
@@ -81,9 +81,9 @@ module.exports = {
 * chunks
 
   配置代码分割功能对哪些代码生效。有三个取值，默认为async：
-  * all 对同步代码和异步代码都进行code splitting 例如`import _ from 'lodash'`和`import('lodash')`这两种方式
-  * initial 只对同步代码生效 例如`import _ from 'lodash'`
-  * async 只对异步代码生效 例如`import('lodash')`
+  * **all** 对同步代码和异步代码都进行code splitting，例如`import _ from 'lodash'`和`import('lodash')`这两种方式
+  * **initial** 只对同步代码生效，例如`import _ from 'lodash'`
+  * **async** 只对异步代码生效，例如`import('lodash')`
 
   当你配置的是all或者initial时，不一定就会真的直接对你的同步代码做代码分割，而是还要继续看cacheGroups配置参数中的相关配置
 * cacheGroups

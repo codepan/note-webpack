@@ -55,9 +55,11 @@ document.addEventListener('click', () => {
 
 这样虽然实现了异步加载，虽然首屏加载的资源变少了，页面会变快，但是会带来另一个问题就是，当用户点击了之后才去加载所需的资源，这样给用户响应的时间势必就会变长。
 
-那么有没有办法做到：1.拆分资源，尽可能减少首屏无用资源的加载；2.快速响应用户所需的资源
+那么有没有办法做到：
+1. 拆分资源，尽可能减少首屏无用资源的加载；
+2. 快速响应用户所需的资源
 
-webpack中Prefetch/Preloading modules就可以派上用场了
+webpack中Prefetch/Preload modules就可以派上用场了
 
 只需将上面index.js中的代码做一个小小的改动
 ```js
@@ -73,4 +75,4 @@ document.addEventListener('click', () => {
 
 ***浏览器加载完所有的主要资源之后，在适当的空闲的时机偷摸地去加载本应该异步加载的资源，加载完成之后浏览器就会缓存起来，等到用户真正的点击按钮，此时再去加载资源时，浏览器就会直接从缓存中获取资源***
 
-Preloading与Prefetching的区别在于，Preloading会和其它资源并行的被加载，而Prefetching是在重要资源加载完毕后再被加载
+Preload与Prefetch的区别在于，Preload会和其它资源并行的被加载，而Prefetch是在重要资源加载完毕后再被加载
